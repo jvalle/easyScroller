@@ -6,17 +6,17 @@
 
 	<link rel="stylesheet" type="text/css" href="styles/demo.css">
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script type="text/javascript" src="scripts/easyScroller.js"></script>
 </head>
 <body>
 	<section id="main">
 		<nav class="scrollNav">
 			<ul>
-				<li><a id="#a-link" href="#">Section a</a></li>
-				<li><a id="#b-link" href="#">Section b</a></li>
-				<li><a id="#c-link" href="#">Section c</a></li>
-				<li><a id="#d-link" href="#">Section d</a></li>
+				<li><a id="a-link" href="#">Section a</a></li>
+				<li><a id="b-link" href="#">Section b</a></li>
+				<li><a id="c-link" href="#">Section c</a></li>
+				<li><a id="d-link" href="#">Section d</a></li>
 			</ul>
 		</nav>
 	</section>
@@ -34,7 +34,7 @@
 	</section>
 
 	<script type="text/javascript">
-		$('.scrollNav a').easyScroller();
+		$('.scrollNav ul li a').easyScroller();
 	</script>
 </body>
 </html>

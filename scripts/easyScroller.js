@@ -4,13 +4,11 @@
 //
 // Instructions and code maintained at https://github.com/jvalle/easyScroller 
 
-
-
 (function($){
-    $.fn.easyScroller = function() {
-        $this = this;
+    $.fn.easyScroller = function() {       
 
-        $this.click(function() {
+        $(this).click(function() {
+            $this = $(this);
             var sectionId = '#' + $this.attr('id').replace('-link', '');
 
             $('html, body').animate({
