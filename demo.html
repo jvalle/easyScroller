@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>easyScroller Demo</title>
+
+	<link rel="stylesheet" type="text/css" href="styles/demo.css">
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="scripts/easyScroller.js"></script>
+</head>
+<body>
+	<section id="main">
+		<nav class="scrollNav">
+			<ul>
+				<li><a href="#a">Section a</a></li>
+				<li><a href="#b">Section b</a></li>
+				<li><a href="#c">Section c</a></li>
+				<li><a href="#d">Section d</a></li>
+			</ul>
+		</nav>
+	</section>
+	<section id="a">a
+		<a href="#" class="backToTop">Back to Top</a>
+	</section>
+	<section id="b">b
+		<a href="#" class="backToTop">Back to Top</a>
+	</section>
+	<section id="c">c
+		<a href="#" class="backToTop">Back to Top</a>
+	</section>
+	<section id="d">d
+		<a href="#" class="backToTop">Back to Top</a>
+	</section>
+
+	<script type="text/javascript">
+		$('.scrollNav a').easyScroller();
+	</script>
+</body>
+</html>
