@@ -7,10 +7,10 @@ How to Use
 Once you have included the easyScroller.js plugin in your page, simply add a class that you will use to select your `<a>` elements appropriately.
 Ex.  For an individual `<a>` element, or scattered `<a>` elements, one can apply the class directly to the `<a>` element.  For multiple `<a>` elements, such as elements found in a navigation menu, one might apply the class to a `<nav>` or `<ul>` element.
 
-Next, define the id attribute of your `<a>` element as `id="(id_of_destination)-link"`.  This must be defined on each `<a>` element that you want to be a scroll-link.
+Next, define the href attribute of your `<a>` element as `href="#(id_of_destination)"`.  This must be defined on each `<a>` element that you want to be a scroll-link.  This also enables a functional fall-back if javascript is not enabled for the user.  (Thanks Michael!)
 
 So for example, a single `<a>` element that you would like to scroll to a `<div id="myDiv">` would be of the form: 
-```<a class="scrollNav" id="myDiv-link">Click here to go to myDiv!</a>```
+```<a class="scrollNav" href="#myDiv">Click here to go to myDiv!</a>```
 
 Finally, call the plugin using your class as the selector:
 `$('.scrollNav').easyScroller();`
