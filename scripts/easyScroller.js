@@ -7,9 +7,12 @@
 (function($){
     $.fn.easyScroller = function() {       
 
-        $(this).click(function() {
-            $this = $(this);
-            var sectionId = '#' + $this.attr('id').replace('-link', '');
+        $(this).click(function(event) {
+            var $this = $(this),
+                sectionId = $this.attr('href');
+
+            // it seems like this should be necessary, but Chrome and Firefox work fine without it
+            event.preventDefault();
 
             $('html, body').animate({
                 scrollTop: $(sectionId).offset().top
