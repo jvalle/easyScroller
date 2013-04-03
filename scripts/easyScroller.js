@@ -17,9 +17,6 @@
             var $this = $(this),
                 sectionId = $this.attr('href');
 
-            // it seems like this should be necessary, but Chrome and Firefox work fine without it
-            event.preventDefault();
-
             $('html, body').animate({
                 scrollTop: $(sectionId).offset().top
             }, settings.scrollDownSpeed);
