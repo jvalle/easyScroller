@@ -5,7 +5,12 @@
 // Instructions and code maintained at https://github.com/jvalle/easyScroller 
 
 (function($){
-    $.fn.easyScroller = function() {       
+    $.fn.easyScroller = function(options) {
+
+        var settings = $.extend({
+            scrollDownSpeed: 800,
+            scrollUpSpeed: 600
+        }, options);       
 
         $(this).click(function(event) {
             var $this = $(this),
@@ -16,7 +21,7 @@
 
             $('html, body').animate({
                 scrollTop: $(sectionId).offset().top
-            }, 800);
+            }, settings.scrollDownSpeed);
 
             return false;
         });
@@ -24,7 +29,7 @@
         $('.backToTop').click(function() {
             $('html, body').animate({
                 scrollTop: 0
-            }, 1000);
+            }, settings.scrollUpSpeed);
 
             return false;
         });
