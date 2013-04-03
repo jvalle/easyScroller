@@ -8,6 +8,7 @@
     $.fn.easyScroller = function(options) {
 
         var settings = $.extend({
+            backToTop: false,
             scrollDownSpeed: 800,
             scrollUpSpeed: 600
         }, options);       
@@ -26,12 +27,14 @@
             return false;
         });
 
-        $('.backToTop').click(function() {
-            $('html, body').animate({
-                scrollTop: 0
-            }, settings.scrollUpSpeed);
+        if (settings.backToTop) {
+            $(settings.backToTop).click(function () {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, settings.scrollUpSpeed);
 
-            return false;
-        });
+                return false;
+            });
+        }
     };
 })(jQuery);
