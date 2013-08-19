@@ -15,11 +15,16 @@ So for example, a single `<a>` element that you would like to scroll to a `<div 
 Finally, call the plugin using your appropriate selector:
 `$('.scrollNav').easyScroller();`
 
-The settings that you can pass when you call the plugin, along with their defaults are as follows:
-    scrollDownSpeed: 800,
-    scrollUpSpeed: 600,
-    backToTop: false
-    
-If you would like to set an `<a>` element as a link that will scroll back to the top of the page, pass the selector you would like to use with the backToTop setting instead of false.
+Options
+-------
+
+You can pass configuration options in an object to `easyScroller()`.  For example: `$('.scrollNav').easyScroller({ scrollDownSpeed: 500 })`.
+
+| Option           | Default   | Comment                                                                                                           |
+| ---------------- | --------- | ----------------------------------------------------------------------------------------------------------------- |
+| backToTop        | `false`   | Selector for an optional link that will be used to scroll back to the top of the page.                            |
+| scrollDownSpeed  | 800       | Time, in milliseconds, to be spent on the scroll-down animation.                                                  |
+| scrollUpSpeed    | 600       | Time, in milliseconds, to be spent on the scroll-up animation.                                                    |
+| topOffset        | 0         | Distance, in pixels, to undershoot the target when scrolling. Allows for fixed navigation at the top of the page. |
 
 More features to come as my laziness subsides... Enjoy!
