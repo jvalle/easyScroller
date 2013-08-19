@@ -10,7 +10,8 @@
         var settings = $.extend({
             backToTop: false,
             scrollDownSpeed: 800,
-            scrollUpSpeed: 600
+            scrollUpSpeed: 600,
+            topOffset: 0
         }, options);       
 
         $(this).click(function(event) {
@@ -18,7 +19,7 @@
                 sectionId = $this.attr('href');
 
             $('html, body').animate({
-                scrollTop: $(sectionId).offset().top
+                scrollTop: $(sectionId).offset().top - settings.topOffset
             }, settings.scrollDownSpeed);
 
             return false;
